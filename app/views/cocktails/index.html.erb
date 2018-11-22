@@ -1,0 +1,12 @@
+<h1>All cocktails</h1>
+
+<% @cocktails.each do |cocktail| %>
+  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <%= link_to cocktail_path(cocktail), method: :delete do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %>
+  </h3>
+<% end %>
+
+<%= link_to "Add a new cocktail", new_cocktail_path %>
+
