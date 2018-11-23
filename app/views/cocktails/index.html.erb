@@ -1,12 +1,19 @@
-<h1>All cocktails</h1>
+    <div class="banner" style="background-image: url(<%= image_path("banner-image")%>)";>
+      <div class="banner-content">
+        <h1>Cocktail killer</h1>
+        <p>Les meilleurs cocktails</p>
+        <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <%= yield %>
+           <%= render "shared/cocktail" %>
+        </div>
+      </div>
+    </div>
 
-<% @cocktails.each do |cocktail| %>
-  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %>
-    <%= link_to cocktail_path(cocktail), method: :delete do %>
-      <i class="fa fa-trash" aria-hidden="true"></i>
-    <% end %>
-  </h3>
-<% end %>
 
-<%= link_to "Add a new cocktail", new_cocktail_path %>
+<%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
 
