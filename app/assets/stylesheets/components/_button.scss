@@ -1,0 +1,44 @@
+// .btn-model {
+//   color: #606470;
+//   background-color: transparent;
+//   border: 3px solid #27b1be;
+//   padding: 8px 16px;
+//   border-radius: 50px;
+//   font-weight: lighter;
+//   box-shadow: 1px;
+// }
+
+// .btn-model:hover {
+//   text-decoration: none;
+// }
+
+.btn-model {
+  color: orange;
+  border: 1px solid orange;
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+.btn-model:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: orange;
+}
+
+.btn-banner {
+  color: orange;
+  border: 1px solid orange;
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+
+.btn-banner:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: orange;
+}

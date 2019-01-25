@@ -1,8 +1,36 @@
 <div class="navbar-wagon">
-  <!-- Logo -->
+    <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
     <%= image_tag("logo.jpg") %>
   </a>
+
+  <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn-model" %>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Cocktails</a>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src= "<%= image_path "avatar.jpg" %>" alt="Logo" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><%= link_to "Accueil", root_path %></li>
+          <li><%= link_to "Créer mon cocktail", new_cocktail_path %></li>
+          <li><a href="#">Déconnexion</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Créer son cocktail</a></li>
+        <li><a href="#">Déconnexion</a></li>
+      </ul>
+    </div>
   </div>
 </div>
