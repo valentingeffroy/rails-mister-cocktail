@@ -1,15 +1,17 @@
-    <div class="banner" style="background-image: url(<%= image_path("banner-image")%>)";>
+    <div class="banner" style="background-image: url(<%= image_path("banner-image3")%>)";>
       <div class="banner-content">
         <h1>Cocktail killer</h1>
-        <p>Les meilleurs cocktails</p>
-        <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn-banner" %>
+        <p>Les meilleurs recettes de cocktail</p>
+        <%= link_to "Créer mon cocktail", new_cocktail_path, class: "btn-model" %>
       </div>
     </div>
+      <div class="align">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4">
-          <%= yield %>
-           <%= render "shared/cocktail" %>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <%= yield %>
+             <%= render "shared/cocktail" %>
+          </div>
         </div>
       </div>
     </div>
