@@ -1,12 +1,24 @@
 <% @cocktails.each do |cocktail| %>
-  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %>
-    <% if cocktail.photo.present? %>
-      <%= cl_image_tag(cocktail.photo, width: 400, height: 300, crop: :fill) %>
-    <% else %>
-      <%= cl_image_tag("https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ca72de11ae9cd2fa7367dc1ee76705&w=1000&q=80", width: 400, height: 300, crop: :fill) %>
-    <% end %>
-    <%= link_to cocktail_path(cocktail), method: :delete do %>
-      <i class="fa fa-trash" aria-hidden="true"></i>
-    <% end %>
-  </h3>
+  <div class="card col-xs-12 col-sm-4">
+    <div class="card-image">
+      <% if cocktail.photo.present? %>
+        <%= cl_image_tag(cocktail.photo, width: 400, height: 300, crop: :fill) %>
+        <%= link_to "", cocktail_path(cocktail) %>
+      <% else %>
+        <%= cl_image_tag("https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80", width: 400, height: 300, crop: :fill) %>
+        <%= link_to "", cocktail_path(cocktail) %>
+      <% end %>
+    </div>
+    <div class="card-description">
+      <div>
+        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </h2>
+      </div>
+      <h2>
+        <%= link_to cocktail_path(cocktail), method: :delete do %>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
+      </h2>
+    </div>
+  </div>
 <% end %>
