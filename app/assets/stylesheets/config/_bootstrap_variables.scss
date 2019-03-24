@@ -7,19 +7,19 @@
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $body-bg:                 $light-gray;
-$font-size-base: 18px;
 
 // Colors
-$gray-base:       $gray;
-$brand-primary:   $gray;
-$brand-success:   $green;
-$brand-info:      $yellow;
-$brand-danger:    $red;
-$brand-warning:   $orange;
-
-// Buttons & inputs' radius
-$border-radius-base:  2px;
-$border-radius-large: 2px;
-$border-radius-small: 2px;
+$primary:   $blue;
+// $secondary: $your-secondary-color;
+$success:   $green;
+$info:      $yellow;
+$danger:    $red;
+$warning:   $orange;
+$light:     $light-gray;
+$dark:      $gray;
 
 // Override other variables below!
+$enable-rounded: false;
+$breadcrumb-divider: quote(">");
+$gray-300: #E6E6E6;
+

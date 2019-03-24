@@ -1,36 +1,28 @@
-<div class="navbar-wagon">
-    <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag("logo.jpg") %>
-  </a>
+  <% end %>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <%= link_to "Créer mon cocktail", new_cocktail_path, class: "btn-model" %>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Cocktails</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src= "<%= image_path "avatar.jpg" %>" alt="Logo" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><%= link_to "Accueil", root_path %></li>
-          <li><%= link_to "Créer mon cocktail", new_cocktail_path %></li>
-          <li><a href="#">Déconnexion</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Créer son cocktail</a></li>
-        <li><a href="#">Déconnexion</a></li>
-      </ul>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Créer mon cocktail", new_cocktail_path, class: "btn-model" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Messages", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Accueil", "root_path", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
